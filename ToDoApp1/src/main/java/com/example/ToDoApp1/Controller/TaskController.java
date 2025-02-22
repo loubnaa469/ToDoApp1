@@ -3,14 +3,14 @@ package com.example.ToDoApp1.Controller;
 import com.example.ToDoApp1.Model.task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.example.ToDoApp1.service.productService;
+import com.example.ToDoApp1.service.taskService;
 
 import java.util.List;
 @RestController
 public class TaskController {
 
     @Autowired
-    productService service;
+    taskService service;
 
 
     @GetMapping("/tasks")
