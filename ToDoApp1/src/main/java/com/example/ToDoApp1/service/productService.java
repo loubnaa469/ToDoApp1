@@ -28,4 +28,22 @@ public class productService {
     public void addTask(task t) {
         tasks.add(t);
     }
+
+    public void updatTask(task t) {
+        int index=0;
+        for (int i=0;i< getTasks().size();i++){
+            if (getTasks().get(i).getId()== t.getId())
+                index=i;
+        }
+        tasks.set(index,t);
+    }
+
+    public void deleteTask(int taskId) {
+        int index=0;
+        for (int i=0;i< getTasks().size();i++){
+            if (getTasks().get(i).getId()== taskId )
+                index=i;
+        }
+        tasks.remove(index);
+    }
 }
